@@ -34,4 +34,5 @@ GitHub
 
 
 
-![ChatGPT Image Jul 7, 2025, 06_21_12 PM](https://github.com/user-attachments/assets/bbbf120b-8965-4655-967b-c9bbaea8f34b)
+![fox coding](fox-coding.png)
+
