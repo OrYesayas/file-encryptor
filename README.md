@@ -28,9 +28,8 @@ Better error handling
 
 👨‍💻 Created by
 Or Yesayas
-Computer Science student @ HIT
-LinkedIn
-GitHub
+Computer Science student - HIT
+
 
 
 
