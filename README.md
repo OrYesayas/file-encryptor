@@ -32,7 +32,6 @@ Computer Science student @ HIT
 LinkedIn
 GitHub
 
-<img src="https://raw.githubusercontent.com/OrYesayas/file-encryptor/main/fox-coding.png" width="400" alt="Fox coding"/>
 
 
 
