@@ -33,6 +33,7 @@ LinkedIn
 GitHub
 
 
-![fox coding](fox-coding.png)
+![Fox coding](https://raw.githubusercontent.com/OrYesayas/file-encryptor/main/fox-coding.png)
+
 
 
