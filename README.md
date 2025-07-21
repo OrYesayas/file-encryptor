@@ -55,11 +55,7 @@ Or Yesayas
 Computer Science Student @ HIT  
 LinkedIn: [or yesayas](https://www.linkedin.com/in/or-yesayas)
 
----
 
-## 📸 Project Mascot
-
-![fox programmer](A_vibrant_digital_illustration_features_an_anthrop.png)
 
 ---
 
