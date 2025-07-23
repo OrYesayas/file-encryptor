@@ -10,7 +10,7 @@ Encrypts any file type (text, image, binary) using XOR logic with a password-bas
 | File                        | Description                                                  |
 |-----------------------------|--------------------------------------------------------------|
 | `encryptor.c`               | Basic version: simple XOR encryption using raw password      |
-| `encryptor_v2_no_openssl.c` | Enhanced version with key stretching, file signature, multi-file support |
+| `encryptor_v2.c` | Enhanced version with key stretching, file signature, multi-file support |
 
 ---
 
