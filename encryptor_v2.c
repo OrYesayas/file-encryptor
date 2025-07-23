@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <openssl/sha.h>
 
 #define MAGIC_HEADER "ORENC"
 #define MAGIC_LEN 5
 #define KEY_LEN 32
 
-void hash_password_sha256(const char* password, unsigned char* key_out) {
-    SHA256_CTX sha256;
-    SHA256_Init(&sha256);
-    SHA256_Update(&sha256, password, strlen(password));
-    SHA256_Final(key_out, &sha256);
+void stretch_password(const char* password, unsigned char* key_out) {
+    size_t pass_len = strlen(password);
+    for (int i = 0; i < KEY_LEN; i++) {
+        key_out[i] = password[i % pass_len] ^ (i * 31);
+    }
 }
 
 int encrypt_decrypt_file(const char* input_filename, const char* output_filename, const char* password, const char* mode) {
@@ -29,7 +28,7 @@ int encrypt_decrypt_file(const char* input_filename, const char* output_filename
     }
 
     unsigned char key[KEY_LEN];
-    hash_password_sha256(password, key);
+    stretch_password(password, key);
 
     int i = 0;
     unsigned char byte;
@@ -78,7 +77,7 @@ int main(int argc, char* argv[]) {
     }
 
     for (int i = 2; i < argc - 1; i++) {
-        char* input_file = argv[i];
+        const char* input_file = argv[i];
         char output_file[512];
         snprintf(output_file, sizeof(output_file), "%s.%s", input_file, strcmp(mode, "encrypt") == 0 ? "enc" : "dec");
 
@@ -93,3 +92,4 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
